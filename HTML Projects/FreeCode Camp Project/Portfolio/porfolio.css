@@ -1,0 +1,220 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Quicksand, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: rgb(216, 69, 69);
+    color: white;
+    padding: 20px;
+    font-size: x-large;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 10;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+li{
+    display: inline;
+    margin: 0px 15px;
+    font-weight: 600;
+    padding: 20px;
+}
+
+li:hover{
+    cursor: pointer;
+    background-color: rgb(76, 76, 109);
+}
+
+#welcome-section{
+    background-image: linear-gradient(-115deg, rgb(22, 21, 21),rgb(46, 43, 43), rgb(68, 67, 67));
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    color: white;
+    font-size: 3em;
+}
+
+#intro{
+    font-style: italic;
+    color: rgb(223, 67, 67);
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+#projects{
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(23, 87, 107);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(236, 233, 233);
+}
+
+h2{
+    border-bottom: 2px solid rgb(236, 233, 233);
+    font-size: 2.75em;
+    font-weight: bolder;
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+
+#project-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.project-tile{
+    width: 65vh;
+}
+
+.project-tile > p{
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(43, 43, 43);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.project-tile > img{
+    width: 100%;
+    height: 400px;
+    display: block;
+    object-fit: cover;
+}
+
+button{
+    padding: 10px;
+    font-weight: bold;
+    font-family: inherit;
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgb(43, 43, 43);
+    border: none;
+    border-radius: 5px;
+    margin: 0px;
+    transition: background-color ease-out 300ms;
+    justify-self: center;
+    align-self: start;
+    grid-column: 2 / 3;
+    margin-top: 10px;
+    
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(223, 67, 67);
+}
+
+.project-tile > p{
+    cursor: pointer;
+}
+
+#profile{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    background-color: rgb(46, 43, 43);
+    color: white;
+    font-size: larger;
+}
+
+#profile > h2{
+    border: none;
+}
+
+#contact-links{
+    margin-top: 25px;
+    font-size: 1.5rem;
+    height: 10vh;
+    display: flex;
+    align-content: center;
+}
+
+.links{
+    margin: 10px;
+    transition: transform 300ms ease-out;
+    text-align: center;
+    padding: 12px;
+}
+
+.links:hover {
+    transform: translateY(20px);
+}
+
+.code{
+    color: rgb(43, 43, 43);
+    transition: color 300ms ease-out;
+}
+
+.project-tile:hover .code{
+    color: tomato;
+}
+
+.project-tile:hover{
+    cursor: pointer;
+}
+
+button > i{
+    transition: transform 300ms ease-out;
+}
+
+button:hover > i{
+    transform: translateX(2px);
+}
+
+@media (max-width: 1325px){
+    #project-container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    button{
+        grid-column: 1 / 3;
+    }
+}
+
+@media (max-width: 860px){
+    #project-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    button{
+        align-self: center;
+        margin-bottom: 30px;
+    }
+}
